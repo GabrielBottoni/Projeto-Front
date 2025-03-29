@@ -1,0 +1,134 @@
+.store-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.products-container {
+  width: 65%;
+}
+
+.cart-container {
+  width: 30%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+}
+
+.cart-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cart-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cart-price {
+  font-size: 14px;
+  color: #555;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.cart-controls button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.cart-controls button:hover {
+  background: #0056b3;
+}
+
+.remove-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background: darkred;
+}
+
+.clear-cart-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.clear-cart-button:hover {
+  background: #c82333;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.product-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.add-to-cart {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background: #218838;
+}
