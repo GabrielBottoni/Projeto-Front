@@ -24,7 +24,7 @@ const cartReducer = (state, action) => {
         case "UPDATE_QUANTITY":
             return state.map(item =>
                 item.id === action.id
-                    ? { ...item, quantity: Math.max(action.quantity, 1) } // Garante que a quantidade mínima seja 1
+                    ? { ...item, quantity: Math.max(action.quantity, 1) } 
                     : item
             );
 

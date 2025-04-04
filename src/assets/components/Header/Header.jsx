@@ -4,16 +4,9 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Container,
 } from 'reactstrap';
+import { FaPizzaSlice, FaUtensils } from 'react-icons/fa';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,33 +14,13 @@ function Header() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="dark" dark expand="lg"> {/* 🔹 Define cor e responsividade */}
-        <NavbarBrand href="/">Reactstrap</NavbarBrand>
+    <Navbar color="dark" dark expand="lg" className="p-4"> 
+    <Container>
+        <NavbarBrand href="/"><FaUtensils size={40}/> <span className='fs-3 fw-bolder'>Mestre do Sabor </span></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu end> {/* 🔹 Alinha corretamente à direita */}
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
+        </Container>
     </Navbar>
   );
 }

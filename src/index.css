@@ -1,0 +1,10 @@
+/* Títulos com Righteous */
+h1, h2, h3 {
+    font-family: 'Righteous', sans-serif;
+  }
+  
+  /* Corpo de texto com Roboto */
+  body, p {
+    font-family: 'Roboto', sans-serif;
+  }
+  

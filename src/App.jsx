@@ -7,27 +7,37 @@ import { CartProvider } from './assets/Hooks/CartContext';
 
 //
 
-import Users from './assets/components/Users/Users'
-import Store from './assets/components/Content/Store';
+import Store from './assets/components/Store/Store'
+import Admin from './assets/components/Admin/Admin';
+//Componentes de autenticação
 
+import PrivateRoute from './assets/components/PrivateRoute'; // rota protegida
+import { Provider } from 'react-redux';
+import { store } from './assets/components/redux/store';
 
 function App() {
   return (
     <>
-    <CartProvider>
+    <Provider store={store}>
+      <CartProvider>
 
+        <Header />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/carrinho" element={<Store />} />
 
-      <Header />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/carrinho" element={<Store />} />
-        </Routes>
-      </Router>
-      <Footer />
+           <Route path='/Admin' element={<PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+            }
+            />
+          </Routes>
+        </Router>
+        <Footer />
 
       </CartProvider>
+      </Provider>
     </>
   )
 }
