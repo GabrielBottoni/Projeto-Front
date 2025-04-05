@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Navbar,
-  NavbarBrand,
-  Container,
-  Button,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap';
+import { Navbar, NavbarBrand, Container, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { FaUtensils, FaSignOutAlt, FaShoppingCart } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/authSlice';
@@ -34,6 +25,20 @@ function Header() {
 
   const isAdminPage = location.pathname === '/admin';
   const isCarrinhoPage = location.pathname === '/carrinho';
+  const isHomePage = location.pathname === '/';
+
+  if (isHomePage) {
+    return (
+      <Navbar color="dark" dark expand="lg" className="p-4">
+        <Container className="d-flex justify-content-between align-items-center">
+          <NavbarBrand href="/">
+            <FaUtensils size={40} />{' '}
+            <span className="fs-3 fw-bolder">Mestre do Sabor</span>
+          </NavbarBrand>
+        </Container>
+      </Navbar>
+    );
+  }
 
   return (
     <Navbar color="dark" dark expand="lg" className="p-4">

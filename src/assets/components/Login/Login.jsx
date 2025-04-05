@@ -79,7 +79,7 @@ function LoginPage() {
             }}
           >
             <CardBody>
-              <CardTitle tag="h4" className="text-center mb-4 d-flex justify-content-center align-items-center gap-2">
+              <CardTitle tag="h4" className="text-center mt-3 d-flex justify-content-center align-items-center gap-2">
                 <FaUser /> Login
               </CardTitle>
 

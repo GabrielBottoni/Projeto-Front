@@ -5,8 +5,14 @@ import {
 } from 'reactstrap';
 import { FaShoppingCart, FaBoxOpen, FaPlusCircle, FaTrashAlt } from 'react-icons/fa';
 import './admin.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../redux/authSlice';
 
 const Admin = () => {
+  const role = useSelector((state) => state.auth.role);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState({
     nome: "",
@@ -14,6 +20,13 @@ const Admin = () => {
     imagem: "",
     descricao: "",
   });
+
+  useEffect(() => {
+    if (role && role !== "admin") {
+      dispatch(logout());
+      navigate("/");
+    }
+  }, [role, dispatch, navigate]);
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -91,7 +104,6 @@ const Admin = () => {
           </Form>
         </Col>
 
-        {/* Lista de Produtos */}
         <Col xs="12" md="8">
           <h3 className="mb-4 d-flex align-items-center fw-bold">
             <FaShoppingCart className="me-2" />
