@@ -3,20 +3,22 @@ html, body {
     margin: 0;
   }
   
-  #root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.vh-100 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  margin-top: auto;
+}
   
-  .vh-100 {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
+
   

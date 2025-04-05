@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .login-text {
+      order: 1 !important;
+    }
+  
+    .login-form {
+      order: 2 !important;
+    }
+  }
+  
+
+.container-login {
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+  }
+  
+.login-form a, .login-form button {
+  text-decoration: none !important;
+}
+  
+form {
+  box-shadow: none !important;
+}
+
+.fonte-dados {
+  font-size: 10px;
+}
