@@ -132,10 +132,10 @@ function LoginPage() {
                 </FormGroup>
                 <Button type="submit" color="primary" block>Entrar</Button>
 
-                <div className="text-center mt-3">
-                  <span className="text-muted">Não tem uma conta?</span>
-                  <Button color="link" className="p-0 ms-1">Criar Conta</Button>
-                </div>
+                //<div className="text-center mt-3">
+                //  <span className="text-muted">Não tem uma conta?</span>
+                //  <Button color="link" className="p-0 ms-1">Criar Conta</Button>
+                //</div>
 
                 {auth.status === 'loading' && <p className="text-center mt-3">Carregando...</p>}
               </Form>
