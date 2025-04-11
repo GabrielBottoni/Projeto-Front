@@ -36,7 +36,7 @@
 
 ## Como Rodar Localmente
 
-1. Clone o repositório: https://github.com/GabrielBottoni/Projeto-MIT-1.git
+1. Clone o repositório: [https://github.com/GabrielBottoni/Projeto-Front.git]
 
 2. Instale as dependências: npm install
 
